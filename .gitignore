@@ -114,3 +114,11 @@ $RECYCLE.BIN/
 
 
 project/.classpath
+toypro01/.classpath
+toypro01/src/main/webapp/config/jdbc/jdbc.properties
+toypro01/target/classes/log4j.xml
+toypro01/target/classes/mybatis/model/modelConfig.xml
+toypro01/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+toypro01/target/m2e-wtp/web-resources/META-INF/maven/com.spring/toy01/pom.properties
+toypro01/target/m2e-wtp/web-resources/META-INF/maven/com.spring/toy01/pom.xml
+toypro01/target/test-classes/log4j.xml
