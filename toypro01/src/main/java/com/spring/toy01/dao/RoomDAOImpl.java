@@ -1,5 +1,7 @@
 package com.spring.toy01.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,6 +16,10 @@ public class RoomDAOImpl implements RoomDAO {
 	
 	public int insertRoom(RoomDTO roomDTO) {
 		return sqlSession.insert("mapper.room.insertRoom", roomDTO);
+	}
+	
+	public List selectRoom() {
+		return sqlSession.selectList("mapper.room.selectRoom");
 	}
 	
 }

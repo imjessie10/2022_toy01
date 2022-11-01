@@ -1,7 +1,10 @@
 package com.spring.toy01.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +25,16 @@ public class RoomController {
 		return "/room/add";
 	}
 	
+	@RequestMapping(value="/room/list.view", method=RequestMethod.GET)
+	public String list(Model model) {
+		
+		List list = roomService.selectRoom();
+		System.out.println("list.size: "+list.size());
+		model.addAttribute("list",list);
+		
+		return "/room/list";
+	}
+	
 	@RequestMapping(value="/api/room", method=RequestMethod.POST)
 	public @ResponseBody int addRoom(
 			@RequestBody RoomDTO roomDTO
@@ -29,6 +42,13 @@ public class RoomController {
 		System.out.println("/api/room");
 		System.out.println("roomDTO.getR_name(): "+roomDTO.getR_name());
 		return roomService.insertRoom(roomDTO);
+	}
+	
+	@RequestMapping(value="/api/room", method=RequestMethod.GET)
+	public @ResponseBody List selectRoom(
+			@RequestBody RoomDTO roomDTO
+			) {
+		return roomService.selectRoom();
 	}
 	
 }

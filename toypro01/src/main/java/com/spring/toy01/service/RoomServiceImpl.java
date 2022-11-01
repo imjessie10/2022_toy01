@@ -1,5 +1,7 @@
 package com.spring.toy01.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class RoomServiceImpl implements RoomService {
 	
 	public int insertRoom(RoomDTO roomDTO) {		
 		return roomDAO.insertRoom(roomDTO);
+	}
+	
+	public List selectRoom() {
+		return roomDAO.selectRoom();
 	}
 }

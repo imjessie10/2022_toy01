@@ -9,6 +9,10 @@
 		insert into tb_room (room_id, r_name, r_price, r_desc, r_thumbnail_path, r_defaultcnt)
 		values(seq_tb_room.nextval, #{r_name}, #{r_price}, #{r_desc}, #{r_thumbnail_path}, #{r_defaultcnt})
 	</insert>
-
+	
+	<select id="selectRoom" resultType="roomDTO">
+		select room_id, r_name, r_price, r_desc, r_thumbnail_path, r_defaultcnt 
+		from tb_room
+	</select>
 	
 </mapper>
