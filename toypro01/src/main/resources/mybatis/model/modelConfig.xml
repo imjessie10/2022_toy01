@@ -10,8 +10,7 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="" alias=""></typeAlias>
-
+		<typeAlias type="com.spring.toy01.dto.RoomDTO" alias="roomDTO"></typeAlias>
 	</typeAliases>
 	
 
