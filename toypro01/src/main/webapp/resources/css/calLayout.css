@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.cal{
+	width: 80%;
+	margin: auto;
+}
+.cal .header{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin: 20px 0;
+}
+
+.cal .header div{
+	margin: 0 10px;
+}
+
+.cal .week{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.cal .week div{
+	height: 50px;
+	line-height: 50px;
+}
+
+.cal .days{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.cal .days .date{
+	min-height: 100px;
+}
