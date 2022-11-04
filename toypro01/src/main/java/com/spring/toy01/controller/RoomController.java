@@ -35,6 +35,14 @@ public class RoomController {
 		return "/room/list";
 	}
 	
+	@RequestMapping(value="/api/room/list", method=RequestMethod.GET)
+	public @ResponseBody List listJson(Model model) {
+		
+		List list = roomService.selectRoom();
+		
+		return list;
+	}
+	
 	@RequestMapping(value="/api/room", method=RequestMethod.POST)
 	public @ResponseBody int addRoom(
 			@RequestBody RoomDTO roomDTO
