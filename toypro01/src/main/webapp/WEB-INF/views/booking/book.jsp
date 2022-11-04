@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>예약 상세 | 스페이스토이 </title>
 </head>
 <body>
 
@@ -17,13 +17,13 @@
 방이름 : ${map.roomDTO.r_name }<br>
 결제금액 : ${map.roomDTO.r_price }<br>
 상세 : ${map.roomDTO.r_desc }<br>
-이름 : <input type="text" name="name"><br>
-연락처 : <input type="text" name="tel"><br>
+이름 : <input type="text" name="b_name"><br>
+연락처 : <input type="text" name="b_tel"><br>
 입실일 : <input type="text" name="str_date_in" value='${map.year}-${map.month}-${map.date}'><br>
 퇴실일 : <input type="text" name="str_date_out" value="${map.year}-${map.month}-${map.date+1}"><br>
-예약인원 : <input type="text" name="head_count"><br>
+예약인원 : <input type="text" name="resv_cnt"><br>
 
-메모 : <textarea cols=30 rows=5 name="memo"></textarea><br>
+메모 : <textarea cols=30 rows=5 name="resv_memo"></textarea><br>
 <input type="hidden" name="room_id" value="${map.roomDTO.room_id }">
 <input type="submit" value="예약하기">
 </form>

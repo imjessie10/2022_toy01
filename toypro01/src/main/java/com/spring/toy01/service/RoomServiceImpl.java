@@ -21,4 +21,14 @@ public class RoomServiceImpl implements RoomService {
 	public List selectRoom() {
 		return roomDAO.selectRoom();
 	}
+
+	@Override
+	public int updateRoom(RoomDTO roomDTO) {
+		return roomDAO.updateRoom(roomDTO);
+	}
+
+	@Override
+	public RoomDTO selectRoomInfo(int room_id) {
+		return roomDAO.selectRoomInfo(room_id);
+	}
 }

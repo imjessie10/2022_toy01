@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>예약 | 스페이스토이</title>
+<title>예약달력 | 스페이스토이</title>
 
 <link rel="stylesheet" href="/toy01/resources/css/calLayout.css">
 <script src="/toy01/resources/js/booking/reservation.js"></script>

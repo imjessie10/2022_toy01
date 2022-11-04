@@ -18,8 +18,17 @@ public class RoomDAOImpl implements RoomDAO {
 		return sqlSession.insert("mapper.room.insertRoom", roomDTO);
 	}
 	
+	public int updateRoom(RoomDTO roomDTO) {
+		return sqlSession.update("mapper.room.updateRoom", roomDTO);
+	}
+	
 	public List selectRoom() {
 		return sqlSession.selectList("mapper.room.selectRoom");
 	}
+
+	public RoomDTO selectRoomInfo(int room_id) {
+		return sqlSession.selectOne("mapper.room.selectRoomInfo", room_id);
+	}
+	
 	
 }

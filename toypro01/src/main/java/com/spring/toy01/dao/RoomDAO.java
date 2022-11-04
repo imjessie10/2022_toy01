@@ -8,5 +8,9 @@ public interface RoomDAO {
 	
 	public int insertRoom(RoomDTO roomDTO);
 	
+	public int updateRoom(RoomDTO roomDTO);
+	
 	public List selectRoom();
+
+	public RoomDTO selectRoomInfo(int room_id);
 }

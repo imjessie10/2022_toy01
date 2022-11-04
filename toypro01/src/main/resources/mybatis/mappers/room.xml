@@ -15,4 +15,24 @@
 		from tb_room
 	</select>
 	
+	<select id="selectRoomInfo" resultType="roomDTO" parameterType="int">
+		select
+			room_id, r_name, r_price, r_desc, r_thumbnail_path, r_defaultcnt
+		from
+			tb_room
+		where
+			room_id = #{_parameter}
+	</select>
+	
+	<update id="updateRoom" parameterType="roomDTO">
+		update tb_room
+		set r_name = #{r_name},
+			r_price = #{r_price},
+			r_desc = #{r_desc},
+			r_thumbnail_path = #{r_thumbnail_path},
+			r_defaultcnt = #{r_defaultcnt}
+		where
+			room_id = #{room_id}
+	</update>
+	
 </mapper>

@@ -11,6 +11,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.spring.toy01.dto.RoomDTO" alias="roomDTO"></typeAlias>
+		<typeAlias type="com.spring.toy01.dto.ReservationDTO" alias="rDTO"></typeAlias>
 	</typeAliases>
 	
 

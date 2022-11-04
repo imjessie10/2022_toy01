@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring.toy01.dto.RoomDTO;
@@ -58,5 +59,25 @@ public class RoomController {
 			) {
 		return roomService.selectRoom();
 	}
+	
+	@RequestMapping(value="/api/room", method=RequestMethod.PUT)
+	public @ResponseBody int updateRoom(
+			@RequestBody RoomDTO roomDTO
+		) {
+		return roomService.updateRoom(roomDTO);
+	}
+
+	@RequestMapping(value="/room/detail.view", method=RequestMethod.GET)
+	public String detail(
+			Model model,
+			@RequestParam("room_id") int room_id
+	) {
+
+		RoomDTO roomDTO = roomService.selectRoomInfo(room_id);
+		model.addAttribute("roomDTO", roomDTO);
+		
+		return "/room/detail";
+	}
+
 	
 }

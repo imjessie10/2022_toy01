@@ -8,4 +8,8 @@ public interface RoomService {
 	public int insertRoom(RoomDTO roomDTO);
 	
 	public List selectRoom();
+	
+	public int updateRoom(RoomDTO roomDTO);
+
+	public RoomDTO selectRoomInfo(int room_id);
 }
